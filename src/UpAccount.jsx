@@ -21,9 +21,14 @@ function UpAccount() {
 
       return (
         <div>
-          <div id="name">{name}</div>
+          <h1 id="name">{name}</h1>
           <div id="value">{value}</div>
         </div>
       );
 }
 export default UpAccount;
+
+//Next steps: 
+
+  // automatically update value onChange - get webhook response  
+  //CSS upgrades : change design and add animation and aethetic 

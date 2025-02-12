@@ -3,7 +3,7 @@ import './App.css'
 function App() {
 
   return (
-    <div>
+    <div id='card'>
       <AccountInfo/>
     </div>
   )
