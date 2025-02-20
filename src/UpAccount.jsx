@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-const apiKey = 'up:yeah:8yUTY4o4WauKy5rGw46OaQ1Bn67RER0sacEohM0Tkg2IYpQL5aBoHX0BqCOvuopvvNLY1O645gQH7TS3d9n9mACyzStVx8Tgb3VoLGLWFq1ggBXEPcfHOBT2QuU7NLUc';
-
 function UpAccount() {
   const [name, setName] = useState([]);
   const [value, setValue] = useState([]);
@@ -10,7 +8,7 @@ function UpAccount() {
       const getInfo = (async () => {
         const response = await fetch('https://api.up.com.au/api/v1/accounts?filter[accountType]=SAVER', {
           method: "GET",
-          headers: {'Authorization': `Bearer ${apiKey}`}
+          headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
         })
         const results = await response.json();
         setName(results.data[1].attributes.displayName);
