@@ -40,20 +40,7 @@ app.listen(PORT, () => {
 
 
 //To recreate Checkpoint/ Problem: 
-    //1) Create webhook with new ngrok url (*Note 1)
-        //You must consider your "-X POST" command is in the correct spot // And VITE_UP_API_KEY is valid by using `echo VITE_UP_API_KEY`
-        // C+P this command 
-        //curl -X POST "https://api.up.com.au/api/v1/webhooks" \
-        //   -H "Authorization: Bearer your_real_up_api_key_here" \
-        //   -H "Content-Type: application/json" \
-        //   -d '{
-        //     "data": {
-        //       "attributes": {
-        //         "url": "https://abcd-1234.ngrok.io/webhook",
-        //         "description": "Transaction updates"
-        //       }
-        //     }
-        //   }'
+    //1) Create webhook with new ngrok url in App.jsx under "POST webhook", need to paste new ngrok url where it intructs you to do so. 
 
     //2) test and make sure your new webhook url is working by using the PING 
     
@@ -62,6 +49,6 @@ app.listen(PORT, () => {
     //4) Open ngrok url and click 'visit site', here you should see our running application 
 
     //5) send 0.1c into holiday account and you will be met with 'AWS POST 404 NOT FOUND' err. 
-    
+
 //*Note 1
     // We need to create a new webhook with a new ngrok url because the ngrok im using is FREE and i dont want to pay a subscription for testing. 

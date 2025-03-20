@@ -9,15 +9,38 @@ function App() {
   useEffect(() => {
 // testing 
 // GET all webhooks  
-  // const getInfo = (async () => {
-  //   const response = await fetch('https://api.up.com.au/api/v1/webhooks', {
-  //     method: "GET",
-  //     headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
-  //   })
-  //   const results = await response.json();
-  //   setMessage(results)
+  const getInfo = (async () => {
+    const response = await fetch('https://api.up.com.au/api/v1/webhooks', {
+      method: "GET",
+      headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
+    })
+    const results = await response.json();
+    setMessage(results)
+  })
+    getInfo();
+
+// POST webhook  
+  // const createWebhook = (async () => {
+  //   const response = await fetch("https://api.up.com.au/api/v1/webhooks", {
+  //     method: "POST",
+  //     headers: {
+  //       "Authorization": `Bearer ${import.meta.env.VITE_UP_API_KEY}`,
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       data: {
+  //         attributes: {
+            //change url to new url *****
+  //           url: "https://97f6-49-196-18-136.ngrok-free.app/webhook", 
+  //           description: "Transaction updates",
+  //         },
+  //       },
+  //     }),
+  //   });
+  //   const result = await response.json();
+  //   console.log("Webhook Created:", result);
   // })
-  //   getInfo();
+  //   createWebhook();
 
 // GET a specific webhook
     // const retrieveOurWebhook = (async () => {
@@ -43,7 +66,7 @@ function App() {
     
 //DELETE a specific webhook 
     // const deleteWebhook = (async () => {
-    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/f9e29e64-6166-4017-a7e5-7f4db44258d7', {
+    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/f9cb2151-04d4-46cf-af9a-8b3b5524edc0', {
     //     method: "DELETE",
     //     headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
     //   })
