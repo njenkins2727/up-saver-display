@@ -19,7 +19,7 @@ function UpAccount() {
 
         //Using useState to set response from our fetch into a variable we can easily refer back to  
         setName(results.data[1].attributes.displayName); 
-        setBalance(results.data[1].attributes.balance.balance);
+        setBalance(results.data[1].attributes.balance.value);
       }catch(error){
         console.log('failed to fetch account info', error) 
       }

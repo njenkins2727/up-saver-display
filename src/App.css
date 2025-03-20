@@ -40,7 +40,7 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-#value{
+#balance{
   display: flex;
   align-items: center;
   justify-content: center;
