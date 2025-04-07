@@ -20,19 +20,29 @@ function UpAccount() {
         //Using useState to set response from our fetch into a variable we can easily refer back to  
         setName(results.data[1].attributes.displayName); 
         setBalance(results.data[1].attributes.balance.value);
+        console.log(results.data[1])
       }catch(error){
         console.log('failed to fetch account info', error) 
       }
   })
         getInfo();
+
+  const handleUpdate = () => {
+    console.log('Balance update event received!');
+    getInfo(); // re-fetch on custom event
+  };
+
+  window.addEventListener('balance-update', handleUpdate); //browser listens and handels updates
+  return () => window.removeEventListener('balance-update', handleUpdate); //cleanup function
       }, []); 
   
 
       return (
         <div>
           {/* Displaying Name and Balance */}
-          <h1 id="name">{name}</h1>
-          <div id="balance">{balance}</div>
+          <h1 id="name">My {name} Saving</h1>
+          <p id="balance">{balance}</p>
+          <p>Last updated at:  </p>
         </div>
       );
 }
