@@ -7,13 +7,12 @@ function App() {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    const eventSource = new EventSource('http://localhost:5001/events');
+    const eventSource = new EventSource('http://localhost:5001/events'); // Opens a persistent connection to http server which sends events in 'text/event-stream' format. Doesnt close until eventsource.close()
 
-    eventSource.onmessage = (event) => {
+    eventSource.onmessage = (event) => { //onmessage is our event handeler 
       const data = JSON.parse(event.data);
       if (data.type === 'transaction-update') {
-        console.log('Received transaction update');
-        window.dispatchEvent(new Event('balance-update')); // Custom event
+        window.dispatchEvent(new Event('balance-update')); // Creates a custom event in the browser.
       }
     };
 
@@ -41,7 +40,7 @@ function App() {
   //       data: {
   //         attributes: {
   //          //change url to new url *****
-  //           url: "https://a142-49-196-19-183.ngrok-free.app/webhook", 
+  //           url: "https://92e2-49-196-19-194.ngrok-free.app/webhook", 
   //           description: "Transaction updates",
   //         },
   //       },
@@ -83,15 +82,15 @@ function App() {
     //   setText(`webhook has been deleted`)
     // })
     //   deleteWebhook();
-  return () => eventSource.close();
-    
+  //
+    return () => eventSource.close(); // eventSource doesn't close until we command it. 
   }, []); 
 
   return (
     <div id='card'>
       <AccountInfo/>
-      {console.log(message)}
-      {console.log(text)}
+      {/* {console.log(message)}
+      {console.log(text)} */}
     </div>
   )
 }
