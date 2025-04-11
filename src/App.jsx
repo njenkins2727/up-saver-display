@@ -40,7 +40,7 @@ function App() {
   //       data: {
   //         attributes: {
   //          //change url to new url *****
-  //           url: "https://92e2-49-196-19-194.ngrok-free.app/webhook", 
+  //           url: "https://c878-49-196-19-194.ngrok-free.app/webhook", 
   //           description: "Transaction updates",
   //         },
   //       },
@@ -64,7 +64,7 @@ function App() {
 
 //PING a specific webhook
     // const sendPing = (async () => {
-    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/7c68ea26-fdeb-45da-aca5-6b8d961d6b60/ping', {
+    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/5ea647f6-c0d9-4dfc-8755-7cc183099971/ping', {
     //     method: "POST",
     //     headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
     //   })
@@ -75,7 +75,7 @@ function App() {
     
 //DELETE a specific webhook 
     // const deleteWebhook = (async () => {
-    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/b88d3b75-7d6f-4987-8fb6-7e967f45cfc6', {
+    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/ec31fff1-589e-4b63-904d-eb00295e3b40', {
     //     method: "DELETE",
     //     headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
     //   })
@@ -91,8 +91,8 @@ function App() {
 
       <div id='card'>
         <AccountInfo/>
-        {/* {console.log(message)}
-        {console.log(text)} */}
+        {console.log(message)}
+        {console.log(text)}
       </div>
 
       <ul>

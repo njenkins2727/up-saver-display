@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import OdometerDisplay from "./odometerAnimation";
 
 function UpAccount() {
   const [name, setName] = useState([]);
@@ -46,7 +47,9 @@ return (
   <div>
     {/* Displaying Name and Balance */}
     <h1 id="name">My {name} Saving</h1>
-    <p id="balance">{balance}</p>
+    <div id="balance">
+    <OdometerDisplay balance={balance} /> 
+    </div>
     <p>Last updated at:  </p>
   </div>
 );
