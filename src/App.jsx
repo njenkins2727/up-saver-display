@@ -88,20 +88,18 @@ function App() {
 
   return (
     <main>
-
       <div id='card'>
         <AccountInfo/>
-        {console.log(message)}
-        {console.log(text)}
-      </div>
+        {/* {console.log(message)}
+        {console.log(text)} */}
 
-      <ul>
+      <ul id='links'>
         <li><a href="https://github.com/njenkins2727" className='socials'>Github</a></li>
         <li><a href="https://www.linkedin.com/in/nathan-jenkins-17798b236/" className='socials'>Linkedin</a></li>
         <li><a href="https://www.instagram.com/nathanxjenkins/" className='socials'>Instagram</a></li>
         <li>created by nathan</li>
       </ul>
-
+      </div>
     </main>
   )
 }

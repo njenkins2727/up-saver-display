@@ -47,13 +47,11 @@ useEffect(() => {
 }, []); 
 
 return (
-  <div>
-    {/* Displaying Name and Balance */}
+  <div id="center">
+    {/* Displaying Name, Balance and Time */}
     <h1 id="name">My {name} Saving</h1>
-    <div id="balance">
     <OdometerDisplay balance={balance} />
     <LastUpdated timestamp={timestamp}/>
-    </div>
   </div>
 );
 }

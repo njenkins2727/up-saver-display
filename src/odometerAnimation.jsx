@@ -17,7 +17,11 @@ function OdometerDisplay({ balance }) {
     }
   }, [balance]); //runs everytime balance is changed 
 
-  return <div ref={ref} className="odometer" />; 
+  return (
+    <h1 id='balance'>
+      $<div ref={ref} className="odometer"/>
+    </h1>
+)
 }
 
 export default OdometerDisplay;

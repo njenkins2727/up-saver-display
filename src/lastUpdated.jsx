@@ -18,12 +18,12 @@ function LastUpdated({ timestamp }) {
       second: '2-digit',
       hour12: true
     });
-    const display = `Last updated at ${day}<sup>${suffix}</sup> ${month} ${time}`;
+    const display = `Last updated at ${day}<sup>${suffix}</sup>&nbsp${month} ${time}`;
     setFormatted(display);
   }, [timestamp]);
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: formatted }} />
+    <h3 dangerouslySetInnerHTML={{ __html: formatted }} id="time" />
   );
 }
 
