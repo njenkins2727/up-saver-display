@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import OdometerDisplay from "./odometerAnimation";
+import LastUpdated from "./lastUpdated";
 
 function UpAccount() {
   const [name, setName] = useState([]);
   const [balance, setBalance] = useState([]);
+  const [timestamp, setTimestamp] = useState([]);
 
 //Displaying account name and balance in account  
 useEffect(() => {
@@ -24,6 +26,7 @@ useEffect(() => {
       //Using useState to set response from our fetch into a variable we can easily refer back to  
       setName(results.data[1].attributes.displayName); 
       setBalance(results.data[1].attributes.balance.value);
+      setTimestamp(results.data[1].attributes.createdAt);
 
     }catch(error){
       console.log('failed to fetch account info', error) 
@@ -48,9 +51,9 @@ return (
     {/* Displaying Name and Balance */}
     <h1 id="name">My {name} Saving</h1>
     <div id="balance">
-    <OdometerDisplay balance={balance} /> 
+    <OdometerDisplay balance={balance} />
+    <LastUpdated timestamp={timestamp}/>
     </div>
-    <p>Last updated at:  </p>
   </div>
 );
 }
