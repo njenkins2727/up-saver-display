@@ -70,6 +70,10 @@ h1, h2, h3, p, a, li{
   text-decoration: none;
 }
 
+.socials:hover{
+  color: #ffde59;
+}
+
 @media (max-width: 385px) {
  #time{
     font-size: 0.9rem;
