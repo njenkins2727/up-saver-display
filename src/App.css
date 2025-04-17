@@ -70,15 +70,32 @@ h1, h2, h3, p, a, li{
   text-decoration: none;
 }
 
-@media (min-width: 366px) {
-
+@media (max-width: 385px) {
+ #time{
+    font-size: 0.9rem;
+  }
+  #name{
+    font-size: 2rem;
+  }
 }
 
-@media (min-width: 469px) {
-
+@media (max-width: 425px) {
+  #name{
+    font-size: 3rem;
+  }
 }
 
-@media (min-width: 693px) {
-/* change Name to center */
-/* change Links to center */
+@media (max-width: 693px) {
+  #name{
+    display: flex;
+    text-align: center;
+  }
+  #links{
+    margin-top: 2vh;
+    align-items: center;
+    line-height: 4vh;
+  }
+  #card{
+    padding-top: 0%;
+  }
 }
