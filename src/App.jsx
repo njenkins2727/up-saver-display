@@ -7,7 +7,7 @@ function App() {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    const eventSource = new EventSource('http://localhost:5001/events'); // Opens a persistent connection to http server which sends events in 'text/event-stream' format. Doesnt close until eventsource.close()
+    const eventSource = new EventSource(`https://${import.meta.env.VITE_BACKEND_URL}/events`); // Opens a persistent connection to http server which sends events in 'text/event-stream' format. Doesnt close until eventsource.close()
 
     eventSource.onmessage = (event) => { //onmessage is our event handeler 
       const data = JSON.parse(event.data);
@@ -40,7 +40,7 @@ function App() {
   //       data: {
   //         attributes: {
   //          //change url to new url *****
-  //           url: "https://c878-49-196-19-194.ngrok-free.app/webhook", 
+  //           url: `https://${import.meta.env.VITE_BACKEND_URL}/webhook`, 
   //           description: "Transaction updates",
   //         },
   //       },
@@ -75,7 +75,7 @@ function App() {
     
 //DELETE a specific webhook 
     // const deleteWebhook = (async () => {
-    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/ec31fff1-589e-4b63-904d-eb00295e3b40', {
+    //   const response = await fetch('https://api.up.com.au/api/v1/webhooks/7c68ea26-fdeb-45da-aca5-6b8d961d6b60', {
     //     method: "DELETE",
     //     headers: {'Authorization': `Bearer ${import.meta.env.VITE_UP_API_KEY}`}
     //   })
@@ -90,8 +90,8 @@ function App() {
     <main>
       <div id='card'>
         <AccountInfo/>
-        {/* {console.log(message)}
-        {console.log(text)} */}
+        {console.log(message)}
+        {console.log(text)}
 
       <ul id='links'>
         <li><a href="https://github.com/njenkins2727" className='socials'>Github</a></li>

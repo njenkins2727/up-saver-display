@@ -6,7 +6,6 @@
   "scripts": {
     "client": "vite",
     "server": "node server/server.js",
-    "start": "node server.js",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
     "build": "vite build",
     "lint": "eslint .",
