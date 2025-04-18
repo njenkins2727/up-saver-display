@@ -8,7 +8,9 @@ const PORT = 5001;
 let clients = []; 
 
 //Middleware 
-app.use(cors()); //frontend can communicate to backend 
+app.use(cors({  //frontend can communicate to backend 
+  origin: '*' 
+}));
 app.use(bodyParser.json()); // Parses JSON requests
 app.use(express.json());
 
