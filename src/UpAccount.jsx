@@ -48,7 +48,6 @@ useEffect(() => {
 
 return (
   <div id="center">
-    {/* Displaying Name, Balance and Time */}
     <h1 id="name">My {name} Saving</h1>
     <OdometerDisplay balance={balance} />
     <LastUpdated timestamp={timestamp}/>

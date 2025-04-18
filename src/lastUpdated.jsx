@@ -7,7 +7,7 @@ function LastUpdated({ timestamp }) {
     if (!timestamp){
       return console.log('No timestamp provided to <LastUpdated /> component')
     }
-
+    
     const date = new Date(timestamp);
     const day = date.getDate();
     const month = date.toLocaleString('en-AU', { month: 'long' });
