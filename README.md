@@ -2,8 +2,6 @@
 
 This project started after I wanted to see what data you can retrive from the [Up Bank API](https://developer.up.com.au). I decided to make a simple yet functional application to reinforce my knowledge and apply what I was learning. 
 
-![Image of application]('./public/myupsaver-ss.png')
-
 ## 🔧 Tech Stack
 
 - **Node.js + Express.js** — backend server and API integration
@@ -20,6 +18,8 @@ This project started after I wanted to see what data you can retrive from the [U
 ```
 https://myupsaver.onrender.com/
 ```
+
+![Image of application](/public/myupsaver-ss.png)
 
 ## 🚀 How It Works
 
