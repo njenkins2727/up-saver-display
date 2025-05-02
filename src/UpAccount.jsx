@@ -46,8 +46,8 @@ useEffect(() => {
       }
 
       const results = await response.json(); // Since it is an asynchronus function we must await the resonse and convert into json for readability  
-        setTimestamp(results.data[0].attributes.createdAt)
-
+      setTimestamp(results.data[0].attributes.createdAt)
+      
     }catch(error){
       console.log('failed to fetch Transaction info', error) 
     }
@@ -56,6 +56,7 @@ useEffect(() => {
 
   const handleUpdate = () => {
     getInfo(); // re-fetch name and balance 
+    getTransaction();
   };
 
   //We are listening for when the 'balance-update' event is sent to the window object.
