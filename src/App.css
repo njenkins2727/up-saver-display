@@ -83,14 +83,11 @@ h1, h2, h3, p, a, li{
   }
 }
 
-@media (max-width: 425px) {
-  #name{
-    font-size: 3rem;
-  }
-}
+
 
 @media (max-width: 693px) {
   #name{
+    font-size: 3rem;
     display: flex;
     text-align: center;
   }
@@ -101,5 +98,8 @@ h1, h2, h3, p, a, li{
   }
   #card{
     padding-top: 0%;
+  }
+  #balance{
+    margin: 1rem 0 1rem 0;
   }
 }
